@@ -14,11 +14,6 @@ namespace StudentManagementApp
             InitializeComponent();
         }
 
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void pictureBoxExit_Click(object sender, EventArgs e)
         {
             text = "Želite li izaiæi iz aplikacije?";
@@ -31,6 +26,20 @@ namespace StudentManagementApp
             if (result == DialogResult.Yes)
             {
                 Close();
+            }
+        }
+
+        private void buttonAddStudent_Click(object sender, EventArgs e)
+        {
+            FormAddStudent addStudent = new();
+            DialogResult result = addStudent.ShowDialog();
+
+            if (result == DialogResult.Yes)
+            {
+                if (addStudent.Student != null)
+                {
+                    listBoxStudents.Items.Add(addStudent.Student.StudentDetails());
+                }
             }
         }
     }

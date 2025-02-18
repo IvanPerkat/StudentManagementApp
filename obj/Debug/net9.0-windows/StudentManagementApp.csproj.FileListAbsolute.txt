@@ -16,3 +16,4 @@ C:\Users\Gamer\source\repos\StudentManagementApp\obj\Debug\net9.0-windows\Studen
 C:\Users\Gamer\source\repos\StudentManagementApp\obj\Debug\net9.0-windows\ref\StudentManagementApp.dll
 C:\Users\Gamer\source\repos\StudentManagementApp\obj\Debug\net9.0-windows\StudentManagementApp.FormMain.resources
 C:\Users\Gamer\source\repos\StudentManagementApp\obj\Debug\net9.0-windows\StudentManagementApp.Properties.Resources.resources
+C:\Users\Gamer\source\repos\StudentManagementApp\obj\Debug\net9.0-windows\StudentManagementApp.FormAddStudent.resources

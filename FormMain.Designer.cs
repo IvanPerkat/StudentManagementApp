@@ -30,29 +30,48 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelSideBar = new Panel();
+            pictureBoxMenu = new PictureBox();
             pictureBoxExit = new PictureBox();
             panel1 = new Panel();
+            labelStudents = new Label();
+            listBoxStudents = new ListBox();
+            buttonAddStudent = new Button();
             panelSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panelSideBar
             // 
             panelSideBar.BackColor = Color.FromArgb(0, 138, 255);
+            panelSideBar.Controls.Add(pictureBoxMenu);
             panelSideBar.Controls.Add(pictureBoxExit);
             panelSideBar.Dock = DockStyle.Left;
             panelSideBar.Location = new Point(0, 0);
             panelSideBar.Margin = new Padding(2);
             panelSideBar.Name = "panelSideBar";
-            panelSideBar.Size = new Size(80, 461);
+            panelSideBar.Size = new Size(91, 425);
             panelSideBar.TabIndex = 0;
+            // 
+            // pictureBoxMenu
+            // 
+            pictureBoxMenu.Anchor = AnchorStyles.None;
+            pictureBoxMenu.Cursor = Cursors.Hand;
+            pictureBoxMenu.Image = (Image)resources.GetObject("pictureBoxMenu.Image");
+            pictureBoxMenu.Location = new Point(27, 12);
+            pictureBoxMenu.Name = "pictureBoxMenu";
+            pictureBoxMenu.Size = new Size(35, 35);
+            pictureBoxMenu.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxMenu.TabIndex = 1;
+            pictureBoxMenu.TabStop = false;
             // 
             // pictureBoxExit
             // 
             pictureBoxExit.Anchor = AnchorStyles.None;
             pictureBoxExit.Cursor = Cursors.Hand;
             pictureBoxExit.Image = (Image)resources.GetObject("pictureBoxExit.Image");
-            pictureBoxExit.Location = new Point(24, 419);
+            pictureBoxExit.Location = new Point(27, 385);
             pictureBoxExit.Name = "pictureBoxExit";
             pictureBoxExit.Size = new Size(30, 30);
             pictureBoxExit.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -62,30 +81,71 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(0, 138, 255);
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(labelStudents);
             panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(80, 0);
+            panel1.Location = new Point(91, 0);
             panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(804, 49);
+            panel1.Size = new Size(727, 50);
             panel1.TabIndex = 1;
+            // 
+            // labelStudents
+            // 
+            labelStudents.AutoSize = true;
+            labelStudents.Font = new Font("Microsoft JhengHei UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelStudents.Location = new Point(11, 12);
+            labelStudents.Name = "labelStudents";
+            labelStudents.Size = new Size(105, 24);
+            labelStudents.TabIndex = 2;
+            labelStudents.Text = "STUDENTI";
+            // 
+            // listBoxStudents
+            // 
+            listBoxStudents.BackColor = Color.FromArgb(248, 248, 248);
+            listBoxStudents.BorderStyle = BorderStyle.None;
+            listBoxStudents.ForeColor = Color.Black;
+            listBoxStudents.FormattingEnabled = true;
+            listBoxStudents.Location = new Point(103, 56);
+            listBoxStudents.Name = "listBoxStudents";
+            listBoxStudents.Size = new Size(365, 357);
+            listBoxStudents.TabIndex = 0;
+            // 
+            // buttonAddStudent
+            // 
+            buttonAddStudent.BackColor = Color.FromArgb(0, 138, 255);
+            buttonAddStudent.FlatStyle = FlatStyle.Flat;
+            buttonAddStudent.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonAddStudent.ForeColor = Color.White;
+            buttonAddStudent.Location = new Point(711, 387);
+            buttonAddStudent.Name = "buttonAddStudent";
+            buttonAddStudent.Size = new Size(95, 28);
+            buttonAddStudent.TabIndex = 2;
+            buttonAddStudent.Text = "Dodaj";
+            buttonAddStudent.UseVisualStyleBackColor = false;
+            buttonAddStudent.Click += buttonAddStudent_Click;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 461);
+            BackColor = Color.FromArgb(248, 248, 248);
+            ClientSize = new Size(818, 425);
+            Controls.Add(buttonAddStudent);
+            Controls.Add(listBoxStudents);
             Controls.Add(panel1);
             Controls.Add(panelSideBar);
-            Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Student Managment App";
-            Load += FormMain_Load;
             panelSideBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -94,5 +154,9 @@
         private Panel panelSideBar;
         private Panel panel1;
         private PictureBox pictureBoxExit;
+        private ListBox listBoxStudents;
+        private Label labelStudents;
+        private PictureBox pictureBoxMenu;
+        private Button buttonAddStudent;
     }
 }
