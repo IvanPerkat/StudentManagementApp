@@ -106,9 +106,11 @@
             listBoxStudents.BorderStyle = BorderStyle.None;
             listBoxStudents.ForeColor = Color.Black;
             listBoxStudents.FormattingEnabled = true;
-            listBoxStudents.Location = new Point(103, 56);
+            listBoxStudents.Location = new Point(115, 67);
+            listBoxStudents.Margin = new Padding(5);
+            listBoxStudents.MultiColumn = true;
             listBoxStudents.Name = "listBoxStudents";
-            listBoxStudents.Size = new Size(365, 357);
+            listBoxStudents.Size = new Size(703, 136);
             listBoxStudents.TabIndex = 0;
             // 
             // buttonAddStudent
