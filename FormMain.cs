@@ -42,5 +42,63 @@ namespace StudentManagementApp
                 }
             }
         }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (listBoxStudents.SelectedIndex >= 0)
+            {
+                text = "Želite li obrisati studenta?";
+                caption = "Obriši studenta";
+                buttons = MessageBoxButtons.YesNo;
+                icon = MessageBoxIcon.Warning;
+
+                DialogResult result = MessageBox.Show(text, caption, buttons, icon);
+
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        if (listBoxStudents.SelectedItem != null)
+                        {
+                            listBoxStudents.Items.Remove(listBoxStudents.SelectedItem);
+                        }
+                        break;
+
+                    case DialogResult.No:
+                        break;
+                }
+            }
+            else
+            {
+                text = "Odaberite studenta za brisanje!";
+                caption = "Obriši studenta";
+                buttons = MessageBoxButtons.OK;
+                icon = MessageBoxIcon.Warning;
+
+                DialogResult result = MessageBox.Show(text, caption, buttons, icon);
+            }
+        }
+
+        private void buttonDeleteAll_Click(object sender, EventArgs e)
+        {
+            if (listBoxStudents.Items.Count > 0)
+            {
+                text = "Želite li izbrisati sve studente?";
+                caption = "Brisanje svih studenata";
+                buttons = MessageBoxButtons.YesNo;
+                icon = MessageBoxIcon.Warning;
+
+                DialogResult result = MessageBox.Show(text, caption, buttons, icon);
+
+                switch (result)
+                {
+                    case DialogResult.Yes:
+                        listBoxStudents.Items.Clear();
+                        break;
+
+                    case DialogResult.No:
+                        break;
+                }
+            }
+        }
     }
 }

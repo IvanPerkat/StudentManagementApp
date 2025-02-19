@@ -36,6 +36,8 @@
             labelStudents = new Label();
             listBoxStudents = new ListBox();
             buttonAddStudent = new Button();
+            buttonDelete = new Button();
+            buttonDeleteAll = new Button();
             panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).BeginInit();
@@ -103,14 +105,13 @@
             // listBoxStudents
             // 
             listBoxStudents.BackColor = Color.FromArgb(248, 248, 248);
-            listBoxStudents.BorderStyle = BorderStyle.None;
             listBoxStudents.ForeColor = Color.Black;
             listBoxStudents.FormattingEnabled = true;
             listBoxStudents.Location = new Point(115, 67);
             listBoxStudents.Margin = new Padding(5);
             listBoxStudents.MultiColumn = true;
             listBoxStudents.Name = "listBoxStudents";
-            listBoxStudents.Size = new Size(703, 136);
+            listBoxStudents.Size = new Size(703, 208);
             listBoxStudents.TabIndex = 0;
             // 
             // buttonAddStudent
@@ -119,7 +120,7 @@
             buttonAddStudent.FlatStyle = FlatStyle.Flat;
             buttonAddStudent.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddStudent.ForeColor = Color.White;
-            buttonAddStudent.Location = new Point(711, 387);
+            buttonAddStudent.Location = new Point(115, 385);
             buttonAddStudent.Name = "buttonAddStudent";
             buttonAddStudent.Size = new Size(95, 28);
             buttonAddStudent.TabIndex = 2;
@@ -127,12 +128,42 @@
             buttonAddStudent.UseVisualStyleBackColor = false;
             buttonAddStudent.Click += buttonAddStudent_Click;
             // 
+            // buttonDelete
+            // 
+            buttonDelete.BackColor = Color.FromArgb(0, 138, 255);
+            buttonDelete.FlatStyle = FlatStyle.Flat;
+            buttonDelete.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDelete.ForeColor = Color.White;
+            buttonDelete.Location = new Point(216, 385);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(95, 28);
+            buttonDelete.TabIndex = 3;
+            buttonDelete.Text = "Izbriši";
+            buttonDelete.UseVisualStyleBackColor = false;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // buttonDeleteAll
+            // 
+            buttonDeleteAll.BackColor = Color.FromArgb(0, 138, 255);
+            buttonDeleteAll.FlatStyle = FlatStyle.Flat;
+            buttonDeleteAll.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDeleteAll.ForeColor = Color.White;
+            buttonDeleteAll.Location = new Point(317, 385);
+            buttonDeleteAll.Name = "buttonDeleteAll";
+            buttonDeleteAll.Size = new Size(95, 28);
+            buttonDeleteAll.TabIndex = 4;
+            buttonDeleteAll.Text = "Izbriši sve";
+            buttonDeleteAll.UseVisualStyleBackColor = false;
+            buttonDeleteAll.Click += buttonDeleteAll_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 248, 248);
             ClientSize = new Size(818, 425);
+            Controls.Add(buttonDeleteAll);
+            Controls.Add(buttonDelete);
             Controls.Add(buttonAddStudent);
             Controls.Add(listBoxStudents);
             Controls.Add(panel1);
@@ -160,5 +191,7 @@
         private Label labelStudents;
         private PictureBox pictureBoxMenu;
         private Button buttonAddStudent;
+        private Button buttonDelete;
+        private Button buttonDeleteAll;
     }
 }

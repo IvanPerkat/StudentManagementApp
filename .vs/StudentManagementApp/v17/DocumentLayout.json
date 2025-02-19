@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|c:\\users\\gamer\\source\\repos\\studentmanagementapp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|c:\\users\\gamer\\source\\repos\\studentmanagementapp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|c:\\users\\gamer\\source\\repos\\studentmanagementapp\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|c:\\users\\gamer\\source\\repos\\studentmanagementapp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|c:\\users\\gamer\\source\\repos\\studentmanagementapp\\formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 645,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 686,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FormAddStudent.cs",
               "DocumentMoniker": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormAddStudent.cs",
               "RelativeDocumentMoniker": "FormAddStudent.cs",
@@ -55,20 +55,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FormMain.cs",
               "DocumentMoniker": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs",
               "RelativeDocumentMoniker": "FormMain.cs",
-              "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs*",
-              "RelativeToolTip": "FormMain.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs",
+              "RelativeToolTip": "FormMain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-18T18:08:59.107Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FormAddStudent.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormAddStudent.cs",
               "RelativeDocumentMoniker": "FormAddStudent.cs",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\Student.cs",
               "RelativeDocumentMoniker": "Student.cs",
@@ -91,15 +91,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs",
               "RelativeDocumentMoniker": "FormMain.cs",
-              "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs [Design]*",
-              "RelativeToolTip": "FormMain.cs [Design]*",
+              "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs [Design]",
+              "RelativeToolTip": "FormMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:49:27.94Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-18T18:49:27.94Z"
             }
           ]
         },
@@ -114,7 +113,7 @@
           ]
         },
         {
-          "DockedWidth": 212,
+          "DockedWidth": 171,
           "SelectedChildIndex": -1,
           "Children": [
             {
