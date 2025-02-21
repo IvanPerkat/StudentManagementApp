@@ -1,5 +1,3 @@
-using System.Drawing.Text;
-
 namespace StudentManagementApp
 {
     public partial class FormMain : Form
@@ -98,6 +96,15 @@ namespace StudentManagementApp
                     case DialogResult.No:
                         break;
                 }
+            }
+            else
+            {
+                text = "Nema studenata za brisanje!";
+                caption = "Brisanje svih studenata";
+                buttons = MessageBoxButtons.OK;
+                icon = MessageBoxIcon.Warning;
+
+                MessageBox.Show(text, caption, buttons, icon);
             }
         }
     }

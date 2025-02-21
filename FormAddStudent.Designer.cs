@@ -34,6 +34,10 @@
             label2 = new Label();
             buttonAdd = new Button();
             buttonCancel = new Button();
+            labelIndex = new Label();
+            textBoxIndex = new TextBox();
+            monthCalendarBirthday = new MonthCalendar();
+            labelBirthDate = new Label();
             SuspendLayout();
             // 
             // textBoxName
@@ -88,11 +92,46 @@
             buttonCancel.UseVisualStyleBackColor = true;
             buttonCancel.Click += buttonCancel_Click;
             // 
+            // labelIndex
+            // 
+            labelIndex.AutoSize = true;
+            labelIndex.Location = new Point(25, 110);
+            labelIndex.Name = "labelIndex";
+            labelIndex.Size = new Size(41, 15);
+            labelIndex.TabIndex = 7;
+            labelIndex.Text = "Indeks";
+            // 
+            // textBoxIndex
+            // 
+            textBoxIndex.Location = new Point(25, 123);
+            textBoxIndex.Name = "textBoxIndex";
+            textBoxIndex.Size = new Size(100, 23);
+            textBoxIndex.TabIndex = 3;
+            // 
+            // monthCalendarBirthday
+            // 
+            monthCalendarBirthday.Location = new Point(391, 46);
+            monthCalendarBirthday.Name = "monthCalendarBirthday";
+            monthCalendarBirthday.TabIndex = 8;
+            // 
+            // labelBirthDate
+            // 
+            labelBirthDate.AutoSize = true;
+            labelBirthDate.Location = new Point(391, 22);
+            labelBirthDate.Name = "labelBirthDate";
+            labelBirthDate.Size = new Size(86, 15);
+            labelBirthDate.TabIndex = 9;
+            labelBirthDate.Text = "Datum rođenja";
+            // 
             // FormAddStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelBirthDate);
+            Controls.Add(monthCalendarBirthday);
+            Controls.Add(labelIndex);
+            Controls.Add(textBoxIndex);
             Controls.Add(buttonCancel);
             Controls.Add(buttonAdd);
             Controls.Add(label2);
@@ -113,5 +152,9 @@
         private Label label2;
         private Button buttonAdd;
         private Button buttonCancel;
+        private Label labelIndex;
+        private TextBox textBoxIndex;
+        private MonthCalendar monthCalendarBirthday;
+        private Label labelBirthDate;
     }
 }

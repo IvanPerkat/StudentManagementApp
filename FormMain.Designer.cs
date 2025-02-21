@@ -117,6 +117,8 @@
             // buttonAddStudent
             // 
             buttonAddStudent.BackColor = Color.FromArgb(0, 138, 255);
+            buttonAddStudent.FlatAppearance.BorderColor = Color.FromArgb(0, 138, 255);
+            buttonAddStudent.FlatAppearance.BorderSize = 0;
             buttonAddStudent.FlatStyle = FlatStyle.Flat;
             buttonAddStudent.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonAddStudent.ForeColor = Color.White;
@@ -131,6 +133,8 @@
             // buttonDelete
             // 
             buttonDelete.BackColor = Color.FromArgb(0, 138, 255);
+            buttonDelete.FlatAppearance.BorderColor = Color.FromArgb(0, 138, 255);
+            buttonDelete.FlatAppearance.BorderSize = 0;
             buttonDelete.FlatStyle = FlatStyle.Flat;
             buttonDelete.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDelete.ForeColor = Color.White;
@@ -145,6 +149,8 @@
             // buttonDeleteAll
             // 
             buttonDeleteAll.BackColor = Color.FromArgb(0, 138, 255);
+            buttonDeleteAll.FlatAppearance.BorderColor = Color.FromArgb(0, 138, 255);
+            buttonDeleteAll.FlatAppearance.BorderSize = 0;
             buttonDeleteAll.FlatStyle = FlatStyle.Flat;
             buttonDeleteAll.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDeleteAll.ForeColor = Color.White;

@@ -10,16 +10,18 @@ namespace StudentManagementApp
     {
         private string? name;
         private string? surname;
+        private string? index;
 
-        public Student(string? name, string? surname)
+        public Student(string? name, string? surname, string? index)
         {
             this.name = name;
             this.surname = surname;
+            this.index = index;
         }
 
         public string StudentDetails()
         {
-            return $"{name} {surname}";
+            return $" {index} | {name} {surname}";
         }
     }
 }

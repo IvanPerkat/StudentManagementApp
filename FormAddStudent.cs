@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Drawing.Text;
 
 namespace StudentManagementApp
 {
@@ -27,25 +20,35 @@ namespace StudentManagementApp
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBoxName.Text) || String.IsNullOrEmpty(textBoxSurname.Text))
+            foreach (var control in Controls)
             {
-                text = "Ime ili prezime su prazni!";
-                caption = "Greška pri upisivanju";
-                buttons = MessageBoxButtons.OK;
-                icon = MessageBoxIcon.Warning;
+                if (control is TextBox textBox)
+                {
+                    if (String.IsNullOrEmpty(textBox.Text))
+                    {
+                        string emptyTextBox = textBox.Name.Replace("textBox", "");
+                        string traslatedName = TranslatedNames(emptyTextBox);
 
-                MessageBox.Show(text, caption, buttons, icon);
-            }
-            else
-            {
-                Student = new Student(
-                    textBoxName.Text,
-                    textBoxSurname.Text
-                    );
+                        text = $"{traslatedName} nema vrijednost!";
+                        caption = "Greška pri upisivanju";
+                        buttons = MessageBoxButtons.OK;
+                        icon = MessageBoxIcon.Warning;
 
-                DialogResult = DialogResult.Yes;
+                        MessageBox.Show(text, caption, buttons, icon);
+                    }
+                    else
+                    {
+                        Student = new Student(
+                            textBoxName.Text,
+                            textBoxSurname.Text,
+                            textBoxIndex.Text
+                            );
 
-                Close();
+                        DialogResult = DialogResult.Yes;
+
+                        Close();
+                    }
+                }
             }
         }
 
@@ -55,5 +58,13 @@ namespace StudentManagementApp
 
             Close();
         }
+
+        private string TranslatedNames(string name) => name switch
+        {
+            "Name" => "Ime",
+            "Surname" => "Prezime",
+            "Index" => "Indeks",
+            _ => name
+        };
     }
 }
