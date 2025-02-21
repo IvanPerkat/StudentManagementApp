@@ -9,6 +9,7 @@ namespace StudentManagementApp
         private string caption = "";
         private MessageBoxButtons buttons;
         private MessageBoxIcon icon;
+        List<string> emptyFields = new();
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Student? Student { get; set; }
@@ -16,6 +17,15 @@ namespace StudentManagementApp
         public FormAddStudent()
         {
             InitializeComponent();
+        }
+
+        private void FormAddStudent_Load(object sender, EventArgs e)
+        {
+            comboBoxCourse.Items.Add("Računarstvo");
+            comboBoxCourse.Items.Add("Elektronika");
+            comboBoxCourse.Items.Add("Mehatronika");
+            comboBoxCourse.Items.Add("Robotika");
+            comboBoxCourse.Items.Add("Brodogradnja");
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -26,29 +36,41 @@ namespace StudentManagementApp
                 {
                     if (String.IsNullOrEmpty(textBox.Text))
                     {
-                        string emptyTextBox = textBox.Name.Replace("textBox", "");
-                        string traslatedName = TranslatedNames(emptyTextBox);
-
-                        text = $"{traslatedName} nema vrijednost!";
-                        caption = "Greška pri upisivanju";
-                        buttons = MessageBoxButtons.OK;
-                        icon = MessageBoxIcon.Warning;
-
-                        MessageBox.Show(text, caption, buttons, icon);
-                    }
-                    else
-                    {
-                        Student = new Student(
-                            textBoxName.Text,
-                            textBoxSurname.Text,
-                            textBoxIndex.Text
-                            );
-
-                        DialogResult = DialogResult.Yes;
-
-                        Close();
+                        string empty = textBox.Name.Replace("textBox", "");
+                        emptyFields.Add(TranslatedNames(empty));
                     }
                 }
+                else if (control is ComboBox comboBox)
+                {
+                    if (String.IsNullOrEmpty(comboBox.Text))
+                    {
+                        string empty = comboBox.Name.Replace("comboBox", "");
+                        emptyFields.Add(TranslatedNames(empty));
+                    }
+                }
+            }
+
+            if (emptyFields.Count > 0)
+            {
+                text = $"Polja: {String.Join(", ", emptyFields)} su prazna!";
+                caption = "Pogrešan unos";
+                buttons = MessageBoxButtons.OK;
+                icon = MessageBoxIcon.Warning;
+
+                MessageBox.Show(text, caption, buttons, icon);
+            }
+            else
+            {
+                Student = new Student(
+                    textBoxName.Text,
+                    textBoxSurname.Text,
+                    textBoxIndex.Text,
+                    comboBoxCourse.Text
+                    );
+
+                DialogResult = DialogResult.Yes;
+
+                Close();
             }
         }
 
@@ -64,6 +86,7 @@ namespace StudentManagementApp
             "Name" => "Ime",
             "Surname" => "Prezime",
             "Index" => "Indeks",
+            "Course" => "Smjer",
             _ => name
         };
     }

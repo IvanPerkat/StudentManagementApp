@@ -38,6 +38,8 @@
             textBoxIndex = new TextBox();
             monthCalendarBirthday = new MonthCalendar();
             labelBirthDate = new Label();
+            comboBoxCourse = new ComboBox();
+            labelCourse = new Label();
             SuspendLayout();
             // 
             // textBoxName
@@ -74,7 +76,7 @@
             // 
             // buttonAdd
             // 
-            buttonAdd.Location = new Point(25, 178);
+            buttonAdd.Location = new Point(25, 315);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(75, 23);
             buttonAdd.TabIndex = 4;
@@ -84,7 +86,7 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(167, 178);
+            buttonCancel.Location = new Point(167, 315);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(75, 23);
             buttonCancel.TabIndex = 5;
@@ -123,11 +125,30 @@
             labelBirthDate.TabIndex = 9;
             labelBirthDate.Text = "Datum rođenja";
             // 
+            // comboBoxCourse
+            // 
+            comboBoxCourse.FormattingEnabled = true;
+            comboBoxCourse.Location = new Point(187, 27);
+            comboBoxCourse.Name = "comboBoxCourse";
+            comboBoxCourse.Size = new Size(121, 23);
+            comboBoxCourse.TabIndex = 10;
+            // 
+            // labelCourse
+            // 
+            labelCourse.AutoSize = true;
+            labelCourse.Location = new Point(187, 9);
+            labelCourse.Name = "labelCourse";
+            labelCourse.Size = new Size(37, 15);
+            labelCourse.TabIndex = 11;
+            labelCourse.Text = "Smjer";
+            // 
             // FormAddStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelCourse);
+            Controls.Add(comboBoxCourse);
             Controls.Add(labelBirthDate);
             Controls.Add(monthCalendarBirthday);
             Controls.Add(labelIndex);
@@ -140,6 +161,7 @@
             Controls.Add(textBoxName);
             Name = "FormAddStudent";
             Text = "FormAddStudent";
+            Load += FormAddStudent_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,5 +178,7 @@
         private TextBox textBoxIndex;
         private MonthCalendar monthCalendarBirthday;
         private Label labelBirthDate;
+        private ComboBox comboBoxCourse;
+        private Label labelCourse;
     }
 }
