@@ -36,10 +36,10 @@
             buttonCancel = new Button();
             labelIndex = new Label();
             textBoxIndex = new TextBox();
-            monthCalendarBirthday = new MonthCalendar();
             labelBirthDate = new Label();
             comboBoxCourse = new ComboBox();
             labelCourse = new Label();
+            dateTimePickerBirthDay = new DateTimePicker();
             SuspendLayout();
             // 
             // textBoxName
@@ -110,12 +110,6 @@
             textBoxIndex.Size = new Size(100, 23);
             textBoxIndex.TabIndex = 3;
             // 
-            // monthCalendarBirthday
-            // 
-            monthCalendarBirthday.Location = new Point(391, 46);
-            monthCalendarBirthday.Name = "monthCalendarBirthday";
-            monthCalendarBirthday.TabIndex = 8;
-            // 
             // labelBirthDate
             // 
             labelBirthDate.AutoSize = true;
@@ -142,15 +136,22 @@
             labelCourse.TabIndex = 11;
             labelCourse.Text = "Smjer";
             // 
+            // dateTimePickerBirthDay
+            // 
+            dateTimePickerBirthDay.Location = new Point(391, 40);
+            dateTimePickerBirthDay.Name = "dateTimePickerBirthDay";
+            dateTimePickerBirthDay.Size = new Size(200, 23);
+            dateTimePickerBirthDay.TabIndex = 12;
+            // 
             // FormAddStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dateTimePickerBirthDay);
             Controls.Add(labelCourse);
             Controls.Add(comboBoxCourse);
             Controls.Add(labelBirthDate);
-            Controls.Add(monthCalendarBirthday);
             Controls.Add(labelIndex);
             Controls.Add(textBoxIndex);
             Controls.Add(buttonCancel);
@@ -176,9 +177,9 @@
         private Button buttonCancel;
         private Label labelIndex;
         private TextBox textBoxIndex;
-        private MonthCalendar monthCalendarBirthday;
         private Label labelBirthDate;
         private ComboBox comboBoxCourse;
         private Label labelCourse;
+        private DateTimePicker dateTimePickerBirthDay;
     }
 }

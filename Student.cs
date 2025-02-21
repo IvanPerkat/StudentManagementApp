@@ -8,22 +8,24 @@ namespace StudentManagementApp
 {
     public class Student
     {
-        private string? name;
-        private string? surname;
-        private string? index;
-        private string? couse;
+        private string? _name { get; }
+        private string? _surname { get; }
+        private string? _index { get; }
+        private string? _course { get; }
+        private DateOnly _birthDate { get; } 
 
-        public Student(string? name, string? surname, string? index, string? couse)
+        public Student(string? name, string? surname, string? index, string? course, DateOnly birthDate)
         {
-            this.name = name;
-            this.surname = surname;
-            this.index = index;
-            this.couse = couse;
+            _name = name;
+            _surname = surname;
+            _index = index;
+            _course = course;
+            _birthDate = birthDate;
         }
 
         public string StudentDetails()
         {
-            return $" {index} | {name} {surname} | {couse}";
+            return $" {_index} | {_name} {_surname} | {_birthDate.ToShortDateString()} | {_course}";
         }
     }
 }

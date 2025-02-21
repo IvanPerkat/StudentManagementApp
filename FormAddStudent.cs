@@ -65,7 +65,8 @@ namespace StudentManagementApp
                     textBoxName.Text,
                     textBoxSurname.Text,
                     textBoxIndex.Text,
-                    comboBoxCourse.Text
+                    comboBoxCourse.Text,
+                    DateOnly.FromDateTime(dateTimePickerBirthDay.Value)
                     );
 
                 DialogResult = DialogResult.Yes;
