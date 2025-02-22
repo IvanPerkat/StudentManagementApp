@@ -32,7 +32,7 @@
             panelSideBar = new Panel();
             pictureBoxMenu = new PictureBox();
             pictureBoxExit = new PictureBox();
-            panel1 = new Panel();
+            panelTopBar = new Panel();
             labelStudents = new Label();
             listBoxStudents = new ListBox();
             buttonAddStudent = new Button();
@@ -41,7 +41,7 @@
             panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).BeginInit();
-            panel1.SuspendLayout();
+            panelTopBar.SuspendLayout();
             SuspendLayout();
             // 
             // panelSideBar
@@ -81,16 +81,16 @@
             pictureBoxExit.TabStop = false;
             pictureBoxExit.Click += pictureBoxExit_Click;
             // 
-            // panel1
+            // panelTopBar
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(labelStudents);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(91, 0);
-            panel1.Margin = new Padding(2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(727, 50);
-            panel1.TabIndex = 1;
+            panelTopBar.BackColor = Color.White;
+            panelTopBar.Controls.Add(labelStudents);
+            panelTopBar.Dock = DockStyle.Top;
+            panelTopBar.Location = new Point(91, 0);
+            panelTopBar.Margin = new Padding(2);
+            panelTopBar.Name = "panelTopBar";
+            panelTopBar.Size = new Size(727, 50);
+            panelTopBar.TabIndex = 1;
             // 
             // labelStudents
             // 
@@ -172,7 +172,7 @@
             Controls.Add(buttonDelete);
             Controls.Add(buttonAddStudent);
             Controls.Add(listBoxStudents);
-            Controls.Add(panel1);
+            Controls.Add(panelTopBar);
             Controls.Add(panelSideBar);
             Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -183,15 +183,15 @@
             panelSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelTopBar.ResumeLayout(false);
+            panelTopBar.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panelSideBar;
-        private Panel panel1;
+        private Panel panelTopBar;
         private PictureBox pictureBoxExit;
         private ListBox listBoxStudents;
         private Label labelStudents;

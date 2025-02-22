@@ -91,6 +91,13 @@ namespace StudentManagementApp
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            text = "Želite li izaći iz unosa studenta?";
+            caption = "Izlaite iz unosa studenta";
+            buttons = MessageBoxButtons.YesNo;
+            icon = MessageBoxIcon.Warning;
+
+            MessageBox.Show(text, caption, buttons, icon);
+
             DialogResult = DialogResult.Cancel;
 
             Close();
@@ -98,20 +105,19 @@ namespace StudentManagementApp
 
         private void trackBarYear_Scroll(object sender, EventArgs e)
         {
-            textBoxYear.Text = trackBarYear.Value.ToString();
+            label3.Text = trackBarYear.Value.ToString();
         }
 
         private void buttonLoadImage_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new())
-            {
-                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-                openFileDialog.Title = "Izaberite sliku";
+            using OpenFileDialog openFileDialog = new();
 
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    pictureBoxStudentImage.Image = new Bitmap(openFileDialog.FileName);
-                }
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            openFileDialog.Title = "Izaberite sliku";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxStudentImage.Image = new Bitmap(openFileDialog.FileName);
             }
         }
 
