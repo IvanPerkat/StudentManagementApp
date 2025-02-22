@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddStudent));
             textBoxName = new TextBox();
             textBoxSurname = new TextBox();
@@ -49,9 +50,14 @@
             panelTopBar = new Panel();
             labelAddStudent = new Label();
             label3 = new Label();
+            statusStripTime = new StatusStrip();
+            toolStripStatusLabelCurrentTime = new ToolStripStatusLabel();
+            toolStripStatusLabelExpiredTime = new ToolStripStatusLabel();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)trackBarYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxStudentImage).BeginInit();
             panelTopBar.SuspendLayout();
+            statusStripTime.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxName
@@ -59,14 +65,14 @@
             textBoxName.Location = new Point(23, 85);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(196, 24);
-            textBoxName.TabIndex = 0;
+            textBoxName.TabIndex = 1;
             // 
             // textBoxSurname
             // 
             textBoxSurname.Location = new Point(23, 147);
             textBoxSurname.Name = "textBoxSurname";
             textBoxSurname.Size = new Size(196, 24);
-            textBoxSurname.TabIndex = 1;
+            textBoxSurname.TabIndex = 2;
             // 
             // labelName
             // 
@@ -94,7 +100,7 @@
             buttonAdd.Location = new Point(23, 339);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(95, 28);
-            buttonAdd.TabIndex = 4;
+            buttonAdd.TabIndex = 7;
             buttonAdd.Text = "Dodaj";
             buttonAdd.UseVisualStyleBackColor = false;
             buttonAdd.Click += buttonAdd_Click;
@@ -107,7 +113,7 @@
             buttonCancel.Location = new Point(124, 339);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(95, 28);
-            buttonCancel.TabIndex = 5;
+            buttonCancel.TabIndex = 8;
             buttonCancel.Text = "Otkaži";
             buttonCancel.UseVisualStyleBackColor = false;
             buttonCancel.Click += buttonCancel_Click;
@@ -217,7 +223,7 @@
             panelTopBar.Dock = DockStyle.Top;
             panelTopBar.Location = new Point(0, 0);
             panelTopBar.Name = "panelTopBar";
-            panelTopBar.Size = new Size(516, 50);
+            panelTopBar.Size = new Size(551, 50);
             panelTopBar.TabIndex = 19;
             // 
             // labelAddStudent
@@ -238,12 +244,38 @@
             label3.Size = new Size(0, 17);
             label3.TabIndex = 20;
             // 
+            // statusStripTime
+            // 
+            statusStripTime.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statusStripTime.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelCurrentTime, toolStripStatusLabelExpiredTime });
+            statusStripTime.Location = new Point(0, 387);
+            statusStripTime.Name = "statusStripTime";
+            statusStripTime.RenderMode = ToolStripRenderMode.Professional;
+            statusStripTime.Size = new Size(551, 22);
+            statusStripTime.SizingGrip = false;
+            statusStripTime.TabIndex = 21;
+            // 
+            // toolStripStatusLabelCurrentTime
+            // 
+            toolStripStatusLabelCurrentTime.Name = "toolStripStatusLabelCurrentTime";
+            toolStripStatusLabelCurrentTime.Size = new Size(0, 17);
+            // 
+            // toolStripStatusLabelExpiredTime
+            // 
+            toolStripStatusLabelExpiredTime.Name = "toolStripStatusLabelExpiredTime";
+            toolStripStatusLabelExpiredTime.Size = new Size(0, 17);
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
+            // 
             // FormAddStudent
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(248, 248, 248);
-            ClientSize = new Size(516, 378);
+            ClientSize = new Size(551, 409);
+            Controls.Add(statusStripTime);
             Controls.Add(label3);
             Controls.Add(panelTopBar);
             Controls.Add(buttonLoadImage);
@@ -273,6 +305,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxStudentImage).EndInit();
             panelTopBar.ResumeLayout(false);
             panelTopBar.PerformLayout();
+            statusStripTime.ResumeLayout(false);
+            statusStripTime.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -299,5 +333,9 @@
         private Panel panelTopBar;
         private Label labelAddStudent;
         private Label label3;
+        private StatusStrip statusStripTime;
+        private ToolStripStatusLabel toolStripStatusLabelCurrentTime;
+        private ToolStripStatusLabel toolStripStatusLabelExpiredTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

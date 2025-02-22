@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing.Design;
 using System.Drawing.Text;
 
 namespace StudentManagementApp
@@ -10,6 +11,7 @@ namespace StudentManagementApp
         private MessageBoxButtons buttons;
         private MessageBoxIcon icon;
         List<string> emptyFields = new();
+        private DateTime currentTime = DateTime.Now;
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Student? Student { get; set; }
@@ -21,6 +23,9 @@ namespace StudentManagementApp
 
         private void FormAddStudent_Load(object sender, EventArgs e)
         {
+            timer1.Start();
+            timer1.Tick += timer1_Tick;
+
             comboBoxCourse.Items.Add("Računarstvo");
             comboBoxCourse.Items.Add("Elektronika");
             comboBoxCourse.Items.Add("Mehatronika");
@@ -29,6 +34,15 @@ namespace StudentManagementApp
 
             trackBarYear.Minimum = 1;
             trackBarYear.Maximum = 5;
+        }
+
+        private void timer1_Tick(object? sender, EventArgs e)
+        {
+            toolStripStatusLabelCurrentTime.Text = $"Trenutro vrijeme: {DateTime.Now.ToLongTimeString()}";
+
+            TimeSpan expiredTime = DateTime.Now - currentTime;
+
+            toolStripStatusLabelExpiredTime.Text = $"Proteklo vrijeme: {expiredTime.Hours.ToString("D2")}:{expiredTime.Minutes.ToString("D2")}:{expiredTime.Seconds.ToString("D2")}";
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

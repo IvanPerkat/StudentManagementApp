@@ -30,8 +30,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 639,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -43,14 +51,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T11:39:28.606Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "FormAddStudent.cs",
               "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormAddStudent.cs",
               "RelativeToolTip": "FormAddStudent.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAqwGIAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAACIAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T11:20:12.991Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "RelativeToolTip": "FormMain.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwG4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:08:59.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T18:08:59.107Z"
             },
             {
               "$type": "Document",
