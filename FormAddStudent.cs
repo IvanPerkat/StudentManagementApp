@@ -101,6 +101,20 @@ namespace StudentManagementApp
             textBoxYear.Text = trackBarYear.Value.ToString();
         }
 
+        private void buttonLoadImage_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                openFileDialog.Title = "Izaberite sliku";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBoxStudentImage.Image = new Bitmap(openFileDialog.FileName);
+                }
+            }
+        }
+
         private string TranslatedNames(string name) => name switch
         {
             "Name" => "Ime",
