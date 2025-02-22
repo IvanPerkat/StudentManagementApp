@@ -13,19 +13,21 @@ namespace StudentManagementApp
         private string? _index { get; }
         private string? _course { get; }
         private DateOnly _birthDate { get; } 
+        private int _year { get; }
 
-        public Student(string? name, string? surname, string? index, string? course, DateOnly birthDate)
+        public Student(string? name, string? surname, string? index, string? course, DateOnly birthDate, int year)
         {
             _name = name;
             _surname = surname;
             _index = index;
             _course = course;
             _birthDate = birthDate;
+            _year = year;
         }
 
         public string StudentDetails()
         {
-            return $" {_index} | {_name} {_surname} | {_birthDate.ToShortDateString()} | {_course}";
+            return $" {_index} | {_year}. | {_name} {_surname} | {_birthDate.ToShortDateString()} | {_course}";
         }
     }
 }

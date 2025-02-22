@@ -26,6 +26,9 @@ namespace StudentManagementApp
             comboBoxCourse.Items.Add("Mehatronika");
             comboBoxCourse.Items.Add("Robotika");
             comboBoxCourse.Items.Add("Brodogradnja");
+
+            trackBarYear.Minimum = 1;
+            trackBarYear.Maximum = 5;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -48,6 +51,14 @@ namespace StudentManagementApp
                         emptyFields.Add(TranslatedNames(empty));
                     }
                 }
+                else if (control is TrackBar trackBar)
+                {
+                    if (String.IsNullOrEmpty(trackBar.Value.ToString()))
+                    {
+                        string empty = trackBar.Name.Replace("trackBar", "");
+                        emptyFields.Add(TranslatedNames(empty));
+                    }
+                }
             }
 
             if (emptyFields.Count > 0)
@@ -57,7 +68,7 @@ namespace StudentManagementApp
                 buttons = MessageBoxButtons.OK;
                 icon = MessageBoxIcon.Warning;
 
-                DialogResult result = MessageBox.Show(text, caption, buttons, icon);
+                MessageBox.Show(text, caption, buttons, icon);
 
                 emptyFields.Clear();
             }
@@ -68,7 +79,8 @@ namespace StudentManagementApp
                     textBoxSurname.Text,
                     textBoxIndex.Text,
                     comboBoxCourse.Text,
-                    DateOnly.FromDateTime(dateTimePickerBirthDay.Value)
+                    DateOnly.FromDateTime(dateTimePickerBirthDay.Value),
+                    trackBarYear.Value
                     );
 
                 DialogResult = DialogResult.Yes;
@@ -84,12 +96,18 @@ namespace StudentManagementApp
             Close();
         }
 
+        private void trackBarYear_Scroll(object sender, EventArgs e)
+        {
+            textBoxYear.Text = trackBarYear.Value.ToString();
+        }
+
         private string TranslatedNames(string name) => name switch
         {
             "Name" => "Ime",
             "Surname" => "Prezime",
             "Index" => "Indeks",
             "Course" => "Smjer",
+            "Year" => "Godnina",
             _ => name
         };
     }

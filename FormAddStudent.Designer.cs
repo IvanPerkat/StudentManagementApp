@@ -40,6 +40,10 @@
             comboBoxCourse = new ComboBox();
             labelCourse = new Label();
             dateTimePickerBirthDay = new DateTimePicker();
+            trackBarYear = new TrackBar();
+            labelYear = new Label();
+            textBoxYear = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)trackBarYear).BeginInit();
             SuspendLayout();
             // 
             // textBoxName
@@ -143,11 +147,39 @@
             dateTimePickerBirthDay.Size = new Size(200, 23);
             dateTimePickerBirthDay.TabIndex = 12;
             // 
+            // trackBarYear
+            // 
+            trackBarYear.Location = new Point(187, 110);
+            trackBarYear.Name = "trackBarYear";
+            trackBarYear.Size = new Size(100, 45);
+            trackBarYear.TabIndex = 13;
+            trackBarYear.Scroll += trackBarYear_Scroll;
+            // 
+            // labelYear
+            // 
+            labelYear.AutoSize = true;
+            labelYear.Location = new Point(187, 83);
+            labelYear.Name = "labelYear";
+            labelYear.Size = new Size(45, 15);
+            labelYear.TabIndex = 14;
+            labelYear.Text = "Godina";
+            // 
+            // textBoxYear
+            // 
+            textBoxYear.Location = new Point(293, 110);
+            textBoxYear.Name = "textBoxYear";
+            textBoxYear.Size = new Size(25, 23);
+            textBoxYear.TabIndex = 15;
+            textBoxYear.TextAlign = HorizontalAlignment.Right;
+            // 
             // FormAddStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBoxYear);
+            Controls.Add(labelYear);
+            Controls.Add(trackBarYear);
             Controls.Add(dateTimePickerBirthDay);
             Controls.Add(labelCourse);
             Controls.Add(comboBoxCourse);
@@ -163,6 +195,7 @@
             Name = "FormAddStudent";
             Text = "FormAddStudent";
             Load += FormAddStudent_Load;
+            ((System.ComponentModel.ISupportInitialize)trackBarYear).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -181,5 +214,8 @@
         private ComboBox comboBoxCourse;
         private Label labelCourse;
         private DateTimePicker dateTimePickerBirthDay;
+        private TrackBar trackBarYear;
+        private Label labelYear;
+        private TextBox textBoxYear;
     }
 }
