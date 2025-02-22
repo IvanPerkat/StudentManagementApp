@@ -57,7 +57,9 @@ namespace StudentManagementApp
                 buttons = MessageBoxButtons.OK;
                 icon = MessageBoxIcon.Warning;
 
-                MessageBox.Show(text, caption, buttons, icon);
+                DialogResult result = MessageBox.Show(text, caption, buttons, icon);
+
+                emptyFields.Clear();
             }
             else
             {
