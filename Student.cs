@@ -14,8 +14,9 @@ namespace StudentManagementApp
         private string? _course { get; }
         private DateOnly _birthDate { get; } 
         private int _year { get; }
+        private string _courseType { get; }
 
-        public Student(string? name, string? surname, string? index, string? course, DateOnly birthDate, int year)
+        public Student(string? name, string? surname, string? index, string? course, DateOnly birthDate, int year, string courseType)
         {
             _name = name;
             _surname = surname;
@@ -23,11 +24,12 @@ namespace StudentManagementApp
             _course = course;
             _birthDate = birthDate;
             _year = year;
+            _courseType = courseType;
         }
 
         public string StudentDetails()
         {
-            return $" {_index} | {_year}. | {_name} {_surname} | {_birthDate.ToShortDateString()} | {_course}";
+            return $" {_index} | {_year}. {_courseType.Substring(0, 1)} | {_name} {_surname} | {_birthDate.ToShortDateString()} | {_course}";
         }
     }
 }

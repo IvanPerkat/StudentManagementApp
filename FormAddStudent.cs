@@ -39,7 +39,7 @@ namespace StudentManagementApp
         private void FormAddStudent_Load(object sender, EventArgs e)
         {
             timer.Start();
-            timer.Tick += timer1_Tick;
+            timer.Tick += timer_Tick;
 
             comboBoxCourse.Items.Add("Računarstvo");
             comboBoxCourse.Items.Add("Elektronika");
@@ -51,7 +51,7 @@ namespace StudentManagementApp
             trackBarYear.Maximum = 5;
         }
 
-        private void timer1_Tick(object? sender, EventArgs e)
+        private void timer_Tick(object? sender, EventArgs e)
         {
             toolStripStatusLabelCurrentTime.Text = $"Trenutro vrijeme: {DateTime.Now.ToLongTimeString()}";
 
@@ -101,7 +101,8 @@ namespace StudentManagementApp
                     textBoxIndex.Text,
                     comboBoxCourse.Text,
                     DateOnly.FromDateTime(dateTimePickerBirthDay.Value),
-                    trackBarYear.Value
+                    trackBarYear.Value,
+                    groupBoxCourseType.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked)?.Text
                     );
 
                 DialogResult = DialogResult.Yes;
@@ -126,7 +127,7 @@ namespace StudentManagementApp
 
         private void trackBarYear_Scroll(object sender, EventArgs e)
         {
-            label3.Text = trackBarYear.Value.ToString();
+            labelShowYear.Text = trackBarYear.Value.ToString();
         }
 
         private void buttonLoadImage_Click(object sender, EventArgs e)
