@@ -212,7 +212,7 @@
             openToolStripMenuItem.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             openToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(114, 22);
+            openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "Otvori";
             // 
             // saveToolStripMenuItem
@@ -221,8 +221,9 @@
             saveToolStripMenuItem.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             saveToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(114, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "Spremi";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // settingsToolStripMenuItem
             // 

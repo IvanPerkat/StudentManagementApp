@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.IO;
 
 namespace StudentManagementApp
 {
@@ -162,6 +163,27 @@ namespace StudentManagementApp
         private void pictureBoxAccdb_Click(object sender, EventArgs e)
         {
             Process.Start("msaccess.exe");
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string savePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "students.txt");
+
+            StreamWriter saveFile = new StreamWriter(savePath);
+
+            foreach (var student in listBoxStudents.Items)
+            {
+                saveFile.WriteLine(student);
+            }
+
+            saveFile.Close();
+
+            text = "Lista studenata spremljena!";
+            caption = "Spremljeno";
+            buttons = MessageBoxButtons.OK;
+            icon = MessageBoxIcon.Information;
+
+            MessageBox.Show(text, caption, buttons, icon);
         }
     }
 }
