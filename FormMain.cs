@@ -34,7 +34,7 @@ namespace StudentManagementApp
 
             if (result == DialogResult.Yes)
             {
-                if (addStudent.Student != null)
+                if (addStudent.Student is not null)
                 {
                     listBoxStudents.Items.Add(addStudent.Student.StudentDetails());
                 }
@@ -55,7 +55,7 @@ namespace StudentManagementApp
                 switch (result)
                 {
                     case DialogResult.Yes:
-                        if (listBoxStudents.SelectedItem != null)
+                        if (listBoxStudents.SelectedItem is not null)
                         {
                             listBoxStudents.Items.Remove(listBoxStudents.SelectedItem);
                         }

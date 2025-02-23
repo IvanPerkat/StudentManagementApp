@@ -111,7 +111,7 @@
             listBoxStudents.Margin = new Padding(5);
             listBoxStudents.MultiColumn = true;
             listBoxStudents.Name = "listBoxStudents";
-            listBoxStudents.Size = new Size(703, 208);
+            listBoxStudents.Size = new Size(703, 225);
             listBoxStudents.TabIndex = 0;
             // 
             // buttonAddStudent

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Drawing.Design;
 using System.Drawing.Text;
+using System.Runtime.InteropServices;
 
 namespace StudentManagementApp
 {
@@ -10,8 +11,16 @@ namespace StudentManagementApp
         private string caption = "";
         private MessageBoxButtons buttons;
         private MessageBoxIcon icon;
-        List<string> emptyFields = new();
+        private List<string> emptyFields = new();
         private DateTime currentTime = DateTime.Now;
+        private Dictionary<string, string> translatedNames = new()
+        {
+            { "Name", "Ime" },
+            { "Surname", "Prezime" },
+            { "Index", "Indeks" },
+            { "Course", "Smjer" },
+            { "Year", "Godina" }
+        };
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public Student? Student { get; set; }
@@ -54,7 +63,7 @@ namespace StudentManagementApp
                     if (String.IsNullOrEmpty(textBox.Text))
                     {
                         string empty = textBox.Name.Replace("textBox", "");
-                        emptyFields.Add(TranslatedNames(empty));
+                        emptyFields.Add(translatedNames.TryGetValue(empty, out string? translated) ? translated : empty);
                     }
                 }
                 else if (control is ComboBox comboBox)
@@ -62,7 +71,7 @@ namespace StudentManagementApp
                     if (String.IsNullOrEmpty(comboBox.Text))
                     {
                         string empty = comboBox.Name.Replace("comboBox", "");
-                        emptyFields.Add(TranslatedNames(empty));
+                        emptyFields.Add(translatedNames.TryGetValue(empty, out string? translated) ? translated : empty);
                     }
                 }
                 else if (control is TrackBar trackBar)
@@ -70,7 +79,7 @@ namespace StudentManagementApp
                     if (String.IsNullOrEmpty(trackBar.Value.ToString()))
                     {
                         string empty = trackBar.Name.Replace("trackBar", "");
-                        emptyFields.Add(TranslatedNames(empty));
+                        emptyFields.Add(translatedNames.TryGetValue(empty, out string? translated) ? translated : empty);
                     }
                 }
             }
@@ -134,15 +143,5 @@ namespace StudentManagementApp
                 pictureBoxStudentImage.Image = new Bitmap(openFileDialog.FileName);
             }
         }
-
-        private string TranslatedNames(string name) => name switch
-        {
-            "Name" => "Ime",
-            "Surname" => "Prezime",
-            "Index" => "Indeks",
-            "Course" => "Smjer",
-            "Year" => "Godnina",
-            _ => name
-        };
     }
 }
