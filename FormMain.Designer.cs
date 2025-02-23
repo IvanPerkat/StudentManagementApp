@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panelSideBar = new Panel();
+            pictureBoxAccdb = new PictureBox();
+            pictureBoxPptx = new PictureBox();
+            pictureBoxXlsx = new PictureBox();
+            pictureBoxDocx = new PictureBox();
+            pictureBoxEdge = new PictureBox();
             pictureBoxMenu = new PictureBox();
             pictureBoxExit = new PictureBox();
             panelTopBar = new Panel();
@@ -48,6 +53,11 @@
             buttonDelete = new Button();
             buttonDeleteAll = new Button();
             panelSideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAccdb).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPptx).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxXlsx).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDocx).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEdge).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).BeginInit();
             panelTopBar.SuspendLayout();
@@ -57,23 +67,88 @@
             // panelSideBar
             // 
             panelSideBar.BackColor = Color.FromArgb(0, 138, 255);
+            panelSideBar.Controls.Add(pictureBoxAccdb);
+            panelSideBar.Controls.Add(pictureBoxPptx);
+            panelSideBar.Controls.Add(pictureBoxXlsx);
+            panelSideBar.Controls.Add(pictureBoxDocx);
+            panelSideBar.Controls.Add(pictureBoxEdge);
             panelSideBar.Controls.Add(pictureBoxMenu);
             panelSideBar.Controls.Add(pictureBoxExit);
             panelSideBar.Dock = DockStyle.Left;
             panelSideBar.Location = new Point(0, 0);
             panelSideBar.Margin = new Padding(2);
             panelSideBar.Name = "panelSideBar";
-            panelSideBar.Size = new Size(91, 425);
+            panelSideBar.Size = new Size(78, 425);
             panelSideBar.TabIndex = 0;
+            // 
+            // pictureBoxAccdb
+            // 
+            pictureBoxAccdb.Cursor = Cursors.Hand;
+            pictureBoxAccdb.Image = (Image)resources.GetObject("pictureBoxAccdb.Image");
+            pictureBoxAccdb.Location = new Point(21, 277);
+            pictureBoxAccdb.Name = "pictureBoxAccdb";
+            pictureBoxAccdb.Size = new Size(30, 30);
+            pictureBoxAccdb.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxAccdb.TabIndex = 17;
+            pictureBoxAccdb.TabStop = false;
+            pictureBoxAccdb.Click += pictureBoxAccdb_Click;
+            // 
+            // pictureBoxPptx
+            // 
+            pictureBoxPptx.Cursor = Cursors.Hand;
+            pictureBoxPptx.Image = (Image)resources.GetObject("pictureBoxPptx.Image");
+            pictureBoxPptx.Location = new Point(21, 231);
+            pictureBoxPptx.Name = "pictureBoxPptx";
+            pictureBoxPptx.Size = new Size(30, 30);
+            pictureBoxPptx.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxPptx.TabIndex = 16;
+            pictureBoxPptx.TabStop = false;
+            pictureBoxPptx.Click += pictureBoxPptx_Click;
+            // 
+            // pictureBoxXlsx
+            // 
+            pictureBoxXlsx.Cursor = Cursors.Hand;
+            pictureBoxXlsx.Image = (Image)resources.GetObject("pictureBoxXlsx.Image");
+            pictureBoxXlsx.Location = new Point(21, 139);
+            pictureBoxXlsx.Name = "pictureBoxXlsx";
+            pictureBoxXlsx.Size = new Size(30, 30);
+            pictureBoxXlsx.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxXlsx.TabIndex = 14;
+            pictureBoxXlsx.TabStop = false;
+            pictureBoxXlsx.Click += pictureBoxXlsx_Click;
+            // 
+            // pictureBoxDocx
+            // 
+            pictureBoxDocx.Cursor = Cursors.Hand;
+            pictureBoxDocx.Image = (Image)resources.GetObject("pictureBoxDocx.Image");
+            pictureBoxDocx.Location = new Point(21, 185);
+            pictureBoxDocx.Name = "pictureBoxDocx";
+            pictureBoxDocx.Size = new Size(30, 30);
+            pictureBoxDocx.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxDocx.TabIndex = 13;
+            pictureBoxDocx.TabStop = false;
+            pictureBoxDocx.Click += pictureBoxDocx_Click;
+            // 
+            // pictureBoxEdge
+            // 
+            pictureBoxEdge.Cursor = Cursors.Hand;
+            pictureBoxEdge.Image = (Image)resources.GetObject("pictureBoxEdge.Image");
+            pictureBoxEdge.Location = new Point(21, 93);
+            pictureBoxEdge.Name = "pictureBoxEdge";
+            pictureBoxEdge.Size = new Size(30, 30);
+            pictureBoxEdge.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxEdge.TabIndex = 12;
+            pictureBoxEdge.TabStop = false;
+            pictureBoxEdge.Click += pictureBoxEdge_Click;
             // 
             // pictureBoxMenu
             // 
             pictureBoxMenu.Anchor = AnchorStyles.None;
             pictureBoxMenu.Cursor = Cursors.Hand;
             pictureBoxMenu.Image = (Image)resources.GetObject("pictureBoxMenu.Image");
-            pictureBoxMenu.Location = new Point(27, 12);
+            pictureBoxMenu.Location = new Point(21, 12);
             pictureBoxMenu.Name = "pictureBoxMenu";
-            pictureBoxMenu.Size = new Size(35, 35);
+            pictureBoxMenu.Size = new Size(30, 30);
             pictureBoxMenu.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxMenu.TabIndex = 1;
             pictureBoxMenu.TabStop = false;
@@ -83,7 +158,7 @@
             pictureBoxExit.Anchor = AnchorStyles.None;
             pictureBoxExit.Cursor = Cursors.Hand;
             pictureBoxExit.Image = (Image)resources.GetObject("pictureBoxExit.Image");
-            pictureBoxExit.Location = new Point(27, 385);
+            pictureBoxExit.Location = new Point(21, 385);
             pictureBoxExit.Name = "pictureBoxExit";
             pictureBoxExit.Size = new Size(30, 30);
             pictureBoxExit.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -97,10 +172,10 @@
             panelTopBar.Controls.Add(labelStudents);
             panelTopBar.Controls.Add(menuStrip);
             panelTopBar.Dock = DockStyle.Top;
-            panelTopBar.Location = new Point(91, 0);
+            panelTopBar.Location = new Point(78, 0);
             panelTopBar.Margin = new Padding(2);
             panelTopBar.Name = "panelTopBar";
-            panelTopBar.Size = new Size(727, 70);
+            panelTopBar.Size = new Size(740, 70);
             panelTopBar.TabIndex = 1;
             // 
             // labelStudents
@@ -120,7 +195,7 @@
             menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, settingsToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
-            menuStrip.Size = new Size(727, 24);
+            menuStrip.Size = new Size(740, 24);
             menuStrip.TabIndex = 3;
             // 
             // fileToolStripMenuItem
@@ -137,7 +212,7 @@
             openToolStripMenuItem.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             openToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(114, 22);
             openToolStripMenuItem.Text = "Otvori";
             // 
             // saveToolStripMenuItem
@@ -146,7 +221,7 @@
             saveToolStripMenuItem.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             saveToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(114, 22);
             saveToolStripMenuItem.Text = "Spremi";
             // 
             // settingsToolStripMenuItem
@@ -163,21 +238,21 @@
             themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lightToolStripMenuItem, darkToolStripMenuItem });
             themeToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            themeToolStripMenuItem.Size = new Size(180, 22);
+            themeToolStripMenuItem.Size = new Size(106, 22);
             themeToolStripMenuItem.Text = "Tema";
             // 
             // lightToolStripMenuItem
             // 
             lightToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             lightToolStripMenuItem.Name = "lightToolStripMenuItem";
-            lightToolStripMenuItem.Size = new Size(180, 22);
+            lightToolStripMenuItem.Size = new Size(116, 22);
             lightToolStripMenuItem.Text = "Svijetla";
             // 
             // darkToolStripMenuItem
             // 
             darkToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             darkToolStripMenuItem.Name = "darkToolStripMenuItem";
-            darkToolStripMenuItem.Size = new Size(180, 22);
+            darkToolStripMenuItem.Size = new Size(116, 22);
             darkToolStripMenuItem.Text = "Tamna";
             // 
             // fontToolStripMenuItem
@@ -185,19 +260,20 @@
             fontToolStripMenuItem.BackColor = SystemColors.Control;
             fontToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            fontToolStripMenuItem.Size = new Size(180, 22);
+            fontToolStripMenuItem.Size = new Size(106, 22);
             fontToolStripMenuItem.Text = "Font";
             // 
             // listBoxStudents
             // 
             listBoxStudents.BackColor = Color.FromArgb(248, 248, 248);
+            listBoxStudents.BorderStyle = BorderStyle.None;
             listBoxStudents.ForeColor = Color.Black;
             listBoxStudents.FormattingEnabled = true;
             listBoxStudents.Location = new Point(115, 102);
             listBoxStudents.Margin = new Padding(5);
             listBoxStudents.MultiColumn = true;
             listBoxStudents.Name = "listBoxStudents";
-            listBoxStudents.Size = new Size(703, 225);
+            listBoxStudents.Size = new Size(703, 170);
             listBoxStudents.TabIndex = 0;
             // 
             // buttonAddStudent
@@ -268,6 +344,11 @@
             Text = "Student Managment App";
             Load += FormMain_Load;
             panelSideBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAccdb).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxPptx).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxXlsx).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDocx).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEdge).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxExit).EndInit();
             panelTopBar.ResumeLayout(false);
@@ -297,5 +378,10 @@
         private ToolStripMenuItem lightToolStripMenuItem;
         private ToolStripMenuItem darkToolStripMenuItem;
         private ToolStripMenuItem fontToolStripMenuItem;
+        private PictureBox pictureBoxAccdb;
+        private PictureBox pictureBoxPptx;
+        private PictureBox pictureBoxXlsx;
+        private PictureBox pictureBoxDocx;
+        private PictureBox pictureBoxEdge;
     }
 }

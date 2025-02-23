@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace StudentManagementApp
 {
     public partial class FormMain : Form
@@ -18,7 +20,7 @@ namespace StudentManagementApp
             fileToolStripMenuItem.DropDownClosed += MenuItem_Closed;
 
             settingsToolStripMenuItem.DropDownOpened += MenuItem_Opend;
-            settingsToolStripMenuItem.DropDownClosed += MenuItem_Closed; 
+            settingsToolStripMenuItem.DropDownClosed += MenuItem_Closed;
         }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
@@ -131,6 +133,35 @@ namespace StudentManagementApp
             {
                 menuItem.ForeColor = Color.FromArgb(255, 255, 255, 255);
             }
+        }
+
+        private void pictureBoxEdge_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "msedge.exe",
+                UseShellExecute = true
+            });
+        }
+
+        private void pictureBoxXlsx_Click(object sender, EventArgs e)
+        {
+            Process.Start("excel.exe");
+        }
+
+        private void pictureBoxDocx_Click(object sender, EventArgs e)
+        {
+            Process.Start("winword.exe");
+        }
+
+        private void pictureBoxPptx_Click(object sender, EventArgs e)
+        {
+            Process.Start("powerpnt.exe");
+        }
+
+        private void pictureBoxAccdb_Click(object sender, EventArgs e)
+        {
+            Process.Start("msaccess.exe");
         }
     }
 }
