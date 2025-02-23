@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formaddstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|c:\\users\\gamer\\source\\repos\\studentmanagementapp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DA9A43B7-551E-41B6-8829-606B4C7D41EB}|StudentManagementApp.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -61,8 +61,7 @@
               "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormMain.cs [Design]",
               "RelativeToolTip": "FormMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T21:09:50.977Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-19T21:09:50.977Z"
             },
             {
               "$type": "Document",
@@ -72,7 +71,7 @@
               "RelativeDocumentMoniker": "FormAddStudent.cs",
               "ToolTip": "C:\\Users\\Gamer\\source\\repos\\StudentManagementApp\\FormAddStudent.cs",
               "RelativeToolTip": "FormAddStudent.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwJAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAqwE8AAAB5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T11:20:12.991Z",
               "EditorCaption": ""
@@ -87,8 +86,7 @@
               "RelativeToolTip": "FormMain.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAAAEMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:08:59.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-18T18:08:59.107Z"
             },
             {
               "$type": "Document",

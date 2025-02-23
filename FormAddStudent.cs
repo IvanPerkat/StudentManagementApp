@@ -11,8 +11,8 @@ namespace StudentManagementApp
         private string caption = "";
         private MessageBoxButtons buttons;
         private MessageBoxIcon icon;
-        private List<string> emptyFields = new();
         private DateTime currentTime = DateTime.Now;
+        private List<string> emptyFields = new();
         private Dictionary<string, string> translatedNames = new()
         {
             { "Name", "Ime" },
@@ -20,6 +20,12 @@ namespace StudentManagementApp
             { "Index", "Indeks" },
             { "Course", "Smjer" },
             { "Year", "Godina" }
+        };
+        private Dictionary<Type, string> controlType = new()
+        {
+            { typeof(TextBox), "textBox" },
+            { typeof(ComboBox), "comboBox" },
+            { typeof(TrackBar), "trackBar" }
         };
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -56,29 +62,21 @@ namespace StudentManagementApp
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            foreach (var control in Controls)
+            foreach (Control control in Controls)
             {
-                if (control is TextBox textBox)
+                if (controlType.TryGetValue(control.GetType(), out string? type))
                 {
-                    if (String.IsNullOrEmpty(textBox.Text))
+                    string? value = control switch
                     {
-                        string empty = textBox.Name.Replace("textBox", "");
-                        emptyFields.Add(translatedNames.TryGetValue(empty, out string? translated) ? translated : empty);
-                    }
-                }
-                else if (control is ComboBox comboBox)
-                {
-                    if (String.IsNullOrEmpty(comboBox.Text))
+                        TextBox textBox => textBox.Text,
+                        ComboBox comboBox => comboBox.Text,
+                        TrackBar trackBar => trackBar.Value.ToString(),
+                        _ => null
+                    };
+
+                    if (String.IsNullOrEmpty(value))
                     {
-                        string empty = comboBox.Name.Replace("comboBox", "");
-                        emptyFields.Add(translatedNames.TryGetValue(empty, out string? translated) ? translated : empty);
-                    }
-                }
-                else if (control is TrackBar trackBar)
-                {
-                    if (String.IsNullOrEmpty(trackBar.Value.ToString()))
-                    {
-                        string empty = trackBar.Name.Replace("trackBar", "");
+                        string empty = control.Name.Replace(type, "");
                         emptyFields.Add(translatedNames.TryGetValue(empty, out string? translated) ? translated : empty);
                     }
                 }
