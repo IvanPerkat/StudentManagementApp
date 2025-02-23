@@ -12,6 +12,15 @@ namespace StudentManagementApp
             InitializeComponent();
         }
 
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            fileToolStripMenuItem.DropDownOpened += MenuItem_Opend;
+            fileToolStripMenuItem.DropDownClosed += MenuItem_Closed;
+
+            settingsToolStripMenuItem.DropDownOpened += MenuItem_Opend;
+            settingsToolStripMenuItem.DropDownClosed += MenuItem_Closed; 
+        }
+
         private void pictureBoxExit_Click(object sender, EventArgs e)
         {
             text = "Želite li izaiæi iz aplikacije?";
@@ -105,6 +114,22 @@ namespace StudentManagementApp
                 icon = MessageBoxIcon.Warning;
 
                 MessageBox.Show(text, caption, buttons, icon);
+            }
+        }
+
+        private void MenuItem_Opend(object? sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                menuItem.ForeColor = Color.FromArgb(255, 0, 138, 255);
+            }
+        }
+
+        private void MenuItem_Closed(object? sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                menuItem.ForeColor = Color.FromArgb(255, 255, 255, 255);
             }
         }
     }

@@ -38,8 +38,8 @@ namespace StudentManagementApp
 
         private void FormAddStudent_Load(object sender, EventArgs e)
         {
-            timer1.Start();
-            timer1.Tick += timer1_Tick;
+            timer.Start();
+            timer.Tick += timer1_Tick;
 
             comboBoxCourse.Items.Add("Računarstvo");
             comboBoxCourse.Items.Add("Elektronika");

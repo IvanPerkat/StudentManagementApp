@@ -53,7 +53,7 @@
             statusStripTime = new StatusStrip();
             toolStripStatusLabelCurrentTime = new ToolStripStatusLabel();
             toolStripStatusLabelExpiredTime = new ToolStripStatusLabel();
-            timer1 = new System.Windows.Forms.Timer(components);
+            timer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)trackBarYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxStudentImage).BeginInit();
             panelTopBar.SuspendLayout();
@@ -265,9 +265,9 @@
             toolStripStatusLabelExpiredTime.Name = "toolStripStatusLabelExpiredTime";
             toolStripStatusLabelExpiredTime.Size = new Size(0, 17);
             // 
-            // timer1
+            // timer
             // 
-            timer1.Tick += timer1_Tick;
+            timer.Tick += timer1_Tick;
             // 
             // FormAddStudent
             // 
@@ -336,6 +336,6 @@
         private StatusStrip statusStripTime;
         private ToolStripStatusLabel toolStripStatusLabelCurrentTime;
         private ToolStripStatusLabel toolStripStatusLabelExpiredTime;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer;
     }
 }
