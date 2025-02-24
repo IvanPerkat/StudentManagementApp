@@ -25,7 +25,7 @@ namespace StudentManagementApp
         {
             { typeof(TextBox), "textBox" },
             { typeof(ComboBox), "comboBox" },
-            { typeof(TrackBar), "trackBar" }
+            { typeof(TrackBar), "trackBar" },
         };
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]

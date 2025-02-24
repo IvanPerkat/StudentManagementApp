@@ -22,6 +22,16 @@ namespace StudentManagementApp
 
             settingsToolStripMenuItem.DropDownOpened += MenuItem_Opend;
             settingsToolStripMenuItem.DropDownClosed += MenuItem_Closed;
+
+            pictureBoxAccdb.Tag = "MSACCESS.EXE";
+            pictureBoxDocx.Tag = "WINWORD.EXE";
+            pictureBoxXlsx.Tag = "EXCEL.EXE";
+            pictureBoxPptx.Tag = "POWERPNT.EXE";
+
+            pictureBoxAccdb.Click += OpenApp_Click;
+            pictureBoxDocx.Click += OpenApp_Click;
+            pictureBoxXlsx.Click += OpenApp_Click;
+            pictureBoxPptx.Click += OpenApp_Click;
         }
 
         private void pictureBoxExit_Click(object sender, EventArgs e)
@@ -120,22 +130,6 @@ namespace StudentManagementApp
             }
         }
 
-        private void MenuItem_Opend(object? sender, EventArgs e)
-        {
-            if (sender is ToolStripMenuItem menuItem)
-            {
-                menuItem.ForeColor = Color.FromArgb(255, 0, 138, 255);
-            }
-        }
-
-        private void MenuItem_Closed(object? sender, EventArgs e)
-        {
-            if (sender is ToolStripMenuItem menuItem)
-            {
-                menuItem.ForeColor = Color.FromArgb(255, 255, 255, 255);
-            }
-        }
-
         private void pictureBoxEdge_Click(object sender, EventArgs e)
         {
             Process.Start(new ProcessStartInfo
@@ -143,26 +137,6 @@ namespace StudentManagementApp
                 FileName = "msedge.exe",
                 UseShellExecute = true
             });
-        }
-
-        private void pictureBoxXlsx_Click(object sender, EventArgs e)
-        {
-            Process.Start("excel.exe");
-        }
-
-        private void pictureBoxDocx_Click(object sender, EventArgs e)
-        {
-            Process.Start("winword.exe");
-        }
-
-        private void pictureBoxPptx_Click(object sender, EventArgs e)
-        {
-            Process.Start("powerpnt.exe");
-        }
-
-        private void pictureBoxAccdb_Click(object sender, EventArgs e)
-        {
-            Process.Start("msaccess.exe");
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -184,6 +158,41 @@ namespace StudentManagementApp
             icon = MessageBoxIcon.Information;
 
             MessageBox.Show(text, caption, buttons, icon);
+        }
+
+        private void listBoxStudents_DoubleClick(object sender, EventArgs e)
+        {
+            FormStudentDetails studentDetails = new();
+
+            if (listBoxStudents.SelectedItem is not null)
+            {
+                studentDetails.ShowDialog();
+            }
+        }
+
+        private void MenuItem_Closed(object? sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                menuItem.ForeColor = Color.FromArgb(255, 255, 255, 255);
+            }
+        }
+
+        private void MenuItem_Opend(object? sender, EventArgs e)
+        {
+            if (sender is ToolStripMenuItem menuItem)
+            {
+                menuItem.ForeColor = Color.FromArgb(255, 0, 138, 255);
+            }
+        }
+
+        private void OpenApp_Click(object? sender, EventArgs e)
+        {
+            if (sender is PictureBox pictureBox && pictureBox.Tag is string appName)
+            {
+                string appPath = $"C:/Program Files/Microsoft Office/root/Office16/{appName}";
+                Process.Start(appPath);
+            }
         }
     }
 }

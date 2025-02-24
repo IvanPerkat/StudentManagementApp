@@ -91,7 +91,6 @@
             pictureBoxAccdb.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxAccdb.TabIndex = 17;
             pictureBoxAccdb.TabStop = false;
-            pictureBoxAccdb.Click += pictureBoxAccdb_Click;
             // 
             // pictureBoxPptx
             // 
@@ -103,7 +102,6 @@
             pictureBoxPptx.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxPptx.TabIndex = 16;
             pictureBoxPptx.TabStop = false;
-            pictureBoxPptx.Click += pictureBoxPptx_Click;
             // 
             // pictureBoxXlsx
             // 
@@ -115,7 +113,6 @@
             pictureBoxXlsx.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxXlsx.TabIndex = 14;
             pictureBoxXlsx.TabStop = false;
-            pictureBoxXlsx.Click += pictureBoxXlsx_Click;
             // 
             // pictureBoxDocx
             // 
@@ -127,7 +124,6 @@
             pictureBoxDocx.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxDocx.TabIndex = 13;
             pictureBoxDocx.TabStop = false;
-            pictureBoxDocx.Click += pictureBoxDocx_Click;
             // 
             // pictureBoxEdge
             // 
@@ -212,7 +208,7 @@
             openToolStripMenuItem.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             openToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(114, 22);
             openToolStripMenuItem.Text = "Otvori";
             // 
             // saveToolStripMenuItem
@@ -221,7 +217,7 @@
             saveToolStripMenuItem.Font = new Font("Microsoft JhengHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             saveToolStripMenuItem.ForeColor = Color.FromArgb(0, 138, 255);
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(114, 22);
             saveToolStripMenuItem.Text = "Spremi";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
@@ -276,6 +272,7 @@
             listBoxStudents.Name = "listBoxStudents";
             listBoxStudents.Size = new Size(703, 170);
             listBoxStudents.TabIndex = 0;
+            listBoxStudents.DoubleClick += listBoxStudents_DoubleClick;
             // 
             // buttonAddStudent
             // 
