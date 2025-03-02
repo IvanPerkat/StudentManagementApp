@@ -57,15 +57,20 @@
             groupBoxCourseType = new GroupBox();
             radioButtonNonRegular = new RadioButton();
             radioButtonRegular = new RadioButton();
+            contextMenuStrip = new ContextMenuStrip(components);
+            copyToSurnameToolStripMenuItem = new ToolStripMenuItem();
+            copyToIndexToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)trackBarYear).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxStudentImage).BeginInit();
             panelTopBar.SuspendLayout();
             statusStripTime.SuspendLayout();
             groupBoxCourseType.SuspendLayout();
+            contextMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxName
             // 
+            textBoxName.ContextMenuStrip = contextMenuStrip;
             textBoxName.Location = new Point(23, 85);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(196, 24);
@@ -73,6 +78,7 @@
             // 
             // textBoxSurname
             // 
+            textBoxSurname.ContextMenuStrip = contextMenuStrip;
             textBoxSurname.Location = new Point(23, 145);
             textBoxSurname.Name = "textBoxSurname";
             textBoxSurname.Size = new Size(196, 24);
@@ -133,6 +139,7 @@
             // 
             // textBoxIndex
             // 
+            textBoxIndex.ContextMenuStrip = contextMenuStrip;
             textBoxIndex.Location = new Point(23, 205);
             textBoxIndex.Name = "textBoxIndex";
             textBoxIndex.Size = new Size(196, 24);
@@ -310,6 +317,26 @@
             radioButtonRegular.Text = "Regularan";
             radioButtonRegular.UseVisualStyleBackColor = true;
             // 
+            // contextMenuStrip
+            // 
+            contextMenuStrip.Items.AddRange(new ToolStripItem[] { copyToSurnameToolStripMenuItem, copyToIndexToolStripMenuItem });
+            contextMenuStrip.Name = "contextMenuStrip";
+            contextMenuStrip.Size = new Size(181, 70);
+            // 
+            // copyToSurnameToolStripMenuItem
+            // 
+            copyToSurnameToolStripMenuItem.Name = "copyToSurnameToolStripMenuItem";
+            copyToSurnameToolStripMenuItem.Size = new Size(180, 22);
+            copyToSurnameToolStripMenuItem.Text = "Kopiraj u Prezime";
+            copyToSurnameToolStripMenuItem.Click += copyToSurnameToolStripMenuItem_Click;
+            // 
+            // copyToIndexToolStripMenuItem
+            // 
+            copyToIndexToolStripMenuItem.Name = "copyToIndexToolStripMenuItem";
+            copyToIndexToolStripMenuItem.Size = new Size(180, 22);
+            copyToIndexToolStripMenuItem.Text = "Kopiraj u Indeks";
+            copyToIndexToolStripMenuItem.Click += copyToIndexToolStripMenuItem_Click;
+            // 
             // FormAddStudent
             // 
             AutoScaleDimensions = new SizeF(8F, 17F);
@@ -351,6 +378,7 @@
             statusStripTime.PerformLayout();
             groupBoxCourseType.ResumeLayout(false);
             groupBoxCourseType.PerformLayout();
+            contextMenuStrip.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -384,5 +412,8 @@
         private GroupBox groupBoxCourseType;
         private RadioButton radioButtonNonRegular;
         private RadioButton radioButtonRegular;
+        private ContextMenuStrip contextMenuStrip;
+        private ToolStripMenuItem copyToSurnameToolStripMenuItem;
+        private ToolStripMenuItem copyToIndexToolStripMenuItem;
     }
 }

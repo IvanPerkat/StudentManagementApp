@@ -1,7 +1,4 @@
 ﻿using System.ComponentModel;
-using System.Drawing.Design;
-using System.Drawing.Text;
-using System.Runtime.InteropServices;
 
 namespace StudentManagementApp
 {
@@ -141,6 +138,16 @@ namespace StudentManagementApp
             {
                 pictureBoxStudentImage.Image = new Bitmap(openFileDialog.FileName);
             }
+        }
+
+        private void copyToSurnameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxSurname.Text = textBoxName.Text;
+        }
+
+        private void copyToIndexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBoxIndex.Text = textBoxName.Text;
         }
     }
 }
